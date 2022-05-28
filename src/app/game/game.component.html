@@ -1,0 +1,8 @@
+<div id="map"></div>
+<div class="candidates">
+  <button type="button" class="candidate" *ngFor="let candidate of gameState.candidates">
+    <img [src]="candidate.imageUrl"><br>
+    {{ candidate.name }}
+  </button>
+</div>
+<div>どれ？</div>
