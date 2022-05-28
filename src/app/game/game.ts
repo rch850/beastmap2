@@ -23,20 +23,38 @@ export type GameState = {
   map?: Map
 }
 
+/**
+ * @returns 初期化されたゲームの状態
+ */
 export function initGameState(): GameState {
+  const map = initMap()
+  const userAnswer = ''
+  const candidates = chooseCandidates()
+  const correctAnswer = sample(candidates)?.name ?? ''
+
+  return { candidates, correctAnswer, userAnswer, map }
+}
+
+/**
+ * @returns 初期化されたマップ
+ */
+function initMap(): Map {
   const myMap = map('map').setView(fukuiCenter, 10)
   tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 9,
     attribution: '© OpenStreetMap'
   }).addTo(myMap);
+  return myMap
+}
 
-  const candidates = sampleSize(chojuData.chouju, 4).map(v => {
+/**
+ * @returns ランダムに選んだ選択肢
+ */
+export function chooseCandidates(): Candidate[] {
+  return sampleSize(chojuData.chouju, 4).map(v => {
     return {
       name: v.鳥獣名,
       imageUrl: IMAGES.chouju.find(c => c.鳥獣名 === v.鳥獣名)?.画像 ?? ''
     }
   })
-  const correctAnswer = sample(candidates)?.name ?? ''
-
-  return { candidates, correctAnswer, userAnswer: '', map: myMap }
 }
