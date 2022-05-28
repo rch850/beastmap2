@@ -1,6 +1,7 @@
 <div id="map"></div>
 <div class="candidates">
-  <button type="button" class="candidate" *ngFor="let candidate of gameState.candidates">
+  <button type="button" class="candidate" *ngFor="let candidate of gameState.candidates"
+    (click)="onClickCandidate(candidate)">
     <img [src]="candidate.imageUrl"><br>
     {{ candidate.name }}
   </button>

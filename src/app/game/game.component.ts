@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { initGameState, INITIAL_GAME_STATE } from './game';
+import { Candidate, initGameState, INITIAL_GAME_STATE, nextGame } from './game';
 
 @Component({
   selector: 'app-game',
@@ -15,6 +15,13 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.gameState = initGameState()
+  }
+
+  onClickCandidate(a: Candidate): void {
+    if (a.name === this.gameState.correctAnswer) {
+      alert('正解！')
+      this.gameState = nextGame(this.gameState)
+    }
   }
 
 }
