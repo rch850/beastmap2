@@ -1,4 +1,5 @@
 <div id="map"></div>
+<div>このように分布している鳥獣はどれでしょう？</div>
 <div class="candidates">
   <button type="button" class="candidate" *ngFor="let candidate of gameState.candidates"
     (click)="onClickCandidate(candidate)">
@@ -6,4 +7,4 @@
     {{ candidate.name }}
   </button>
 </div>
-<div>どれ？</div>
+<a routerLink="/about">このページについて</a>
