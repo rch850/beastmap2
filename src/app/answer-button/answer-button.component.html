@@ -1,0 +1,22 @@
+<style>
+  button {
+    background-color: #C8D5B9;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100px;
+  }
+</style>
+
+<button type="button">
+  <img [src]="imageUrl"><br>
+  {{ name }}
+</button>
