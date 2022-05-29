@@ -4,8 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { GameComponent } from './game/game.component';
 
 const routes: Routes = [
-  { path: '', component: GameComponent },
-  { path: 'about', component: AboutComponent }
+  { path: '', loadComponent: () => import('./game/game.component').then(m => m.GameComponent) },
+  { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) }
 ];
 
 @NgModule({
