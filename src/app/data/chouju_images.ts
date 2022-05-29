@@ -27,7 +27,7 @@ export default {
     },
     {
       "鳥獣名": "コガモ",
-      "画像": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Anas_crecca_carolinensis_%28Green-winged_Teal%29_male.jpg/320px-Anas_crecca_carolinensis_%28Green-winged_Teal%29_male.jpg",
+      "画像": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Anas_carolinensis_%28Green-winged_Teal%29_male.jpg/320px-Anas_carolinensis_%28Green-winged_Teal%29_male.jpg",
       "元データ": "http://en.wikipedia.org/wiki/File:Anas_crecca_carolinensis_(Green-winged_Teal)_male.jpg"
     },
     {
@@ -52,7 +52,7 @@ export default {
     },
     {
       "鳥獣名": "ヤマドリ",
-      "画像": "http://upload.wikimedia.org/wikipedia/commons/4/4d/Stavenn_Syrmaticus_soemmerringii_ijimae_.jpg",
+      "画像": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Stavenn_Syrmaticus_soemmerringii_ijimae.jpg",
       "元データ": "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Stavenn_Syrmaticus_soemmerringii_ijimae_.jpg"
     },
     {
