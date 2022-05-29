@@ -1,10 +1,11 @@
 <div id="map"></div>
 <div>このように分布している鳥獣はどれでしょう？</div>
 <div class="candidates">
-  <button type="button" class="candidate" *ngFor="let candidate of gameState.candidates"
-    (click)="onClickCandidate(candidate)">
-    <img [src]="candidate.imageUrl"><br>
-    {{ candidate.name }}
-  </button>
+  <app-answer-button
+    *ngFor="let candidate of gameState.candidates"
+    [name]="candidate.name"
+    [imageUrl]="candidate.imageUrl"
+    (click)="onClickCandidate(candidate)"
+  ></app-answer-button>
 </div>
 <a routerLink="/about">このページについて</a>
