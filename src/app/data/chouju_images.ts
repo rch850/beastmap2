@@ -37,7 +37,7 @@ export default {
     },
     {
       "鳥獣名": "ヒドリガモ",
-      "画像": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Anas_penelope_eclipse.JPG/293px-Anas_penelope_eclipse.JPG",
+      "画像": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Mareca_penelope_eclipse.jpg/293px-Mareca_penelope_eclipse.jpg",
       "元データ": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Anas_penelope_eclipse.JPG"
     },
     {
