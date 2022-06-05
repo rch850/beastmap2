@@ -1,5 +1,5 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
+import { bootstrapApplication, provideProtractorTestingSupport } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule, ROUTES } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
@@ -14,6 +14,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(
       AppRoutingModule
-    )
+    ),
+    environment.production ? [] : provideProtractorTestingSupport()
   ]
 }).catch(err => console.error(err));
