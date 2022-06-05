@@ -5,6 +5,7 @@
     *ngFor="let candidate of gameState.candidates"
     [name]="candidate.name"
     [imageUrl]="candidate.imageUrl"
+    [state]="candidate.state"
     (click)="onClickCandidate(candidate)"
   ></app-answer-button>
 </div>

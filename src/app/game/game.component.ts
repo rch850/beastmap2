@@ -28,8 +28,12 @@ export class GameComponent implements OnInit {
 
   onClickCandidate(a: Candidate): void {
     if (a.name === this.gameState.correctAnswer) {
-      alert('正解！')
-      this.gameState = nextGame(this.gameState)
+      a.state = 'correct'
+      setTimeout(() => {
+        this.gameState = nextGame(this.gameState)
+      }, 3000)
+    } else {
+      a.state = 'wrong'
     }
   }
 

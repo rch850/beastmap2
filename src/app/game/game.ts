@@ -5,6 +5,8 @@ import IMAGES from '../data/chouju_images'
 
 const fukuiCenter: [number, number] = [35.85, 136.25]
 
+export type CandidateState = 'empty' | 'correct' | 'wrong'
+
 export const INITIAL_GAME_STATE: GameState = {
   candidates: [],
   userAnswer: '',
@@ -14,6 +16,7 @@ export const INITIAL_GAME_STATE: GameState = {
 export type Candidate = {
   name: string
   imageUrl: string
+  state: CandidateState
 }
 
 export type GameState = {
@@ -55,7 +58,8 @@ export function chooseCandidates(): Candidate[] {
   return sampleSize(chojuData.chouju, 4).map(v => {
     return {
       name: v.鳥獣名,
-      imageUrl: IMAGES.chouju.find(c => c.鳥獣名 === v.鳥獣名)?.画像 ?? ''
+      imageUrl: IMAGES.chouju.find(c => c.鳥獣名 === v.鳥獣名)?.画像 ?? '',
+      state: 'empty'
     }
   })
 }
