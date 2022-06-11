@@ -14,7 +14,6 @@ bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(
       AppRoutingModule
-    ),
-    environment.production ? [] : provideProtractorTestingSupport()
+    )
   ]
 }).catch(err => console.error(err));
