@@ -11,5 +11,4 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'beastmap2';
 }
