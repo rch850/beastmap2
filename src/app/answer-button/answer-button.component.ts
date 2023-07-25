@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 export type AnswerState = 'empty' | 'correct' | 'wrong'
@@ -7,7 +7,7 @@ export type AnswerState = 'empty' | 'correct' | 'wrong'
   standalone: true,
   selector: 'app-answer-button',
   imports: [
-    CommonModule
+    NgIf
   ],
   templateUrl: './answer-button.component.html',
 })

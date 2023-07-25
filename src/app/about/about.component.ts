@@ -10,11 +10,5 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ]
 })
-export class AboutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class AboutComponent {
 }
