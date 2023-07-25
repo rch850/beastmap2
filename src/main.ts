@@ -1,8 +1,9 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { bootstrapApplication, provideProtractorTestingSupport } from '@angular/platform-browser';
-import { AppRoutingModule, ROUTES } from './app/app-routing.module';
-import { AppComponent } from './app/app.component';
+import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
 
+import { ROUTES } from './app/app.routes';
+import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 
 if (environment.production) {
@@ -11,8 +12,6 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(
-      AppRoutingModule
-    )
+    provideRouter(ROUTES)
   ]
 }).catch(err => console.error(err));
