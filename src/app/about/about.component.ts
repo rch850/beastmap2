@@ -10,5 +10,5 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ]
 })
-export class AboutComponent {
+export default class AboutComponent {
 }

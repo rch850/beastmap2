@@ -15,7 +15,7 @@ import { Candidate, initGameState, INITIAL_GAME_STATE, nextGame } from './game';
     AnswerButtonComponent
   ]
 })
-export class GameComponent implements OnInit {
+export default class GameComponent implements OnInit {
 
   gameState = INITIAL_GAME_STATE
   images: string[] = []
