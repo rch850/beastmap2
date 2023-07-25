@@ -8,17 +8,15 @@ import { AboutComponent } from './about/about.component';
 import { AnswerButtonComponent } from './answer-button/answer-button.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GameComponent,
-    AboutComponent,
-    AnswerButtonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        GameComponent,
+        AboutComponent,
+        AnswerButtonComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
