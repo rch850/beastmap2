@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 import { GameComponent } from './game.component';
 
@@ -11,7 +11,7 @@ describe('GameComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         GameComponent,
-        AppRoutingModule
+        RouterModule.forRoot([])
       ]
     })
     .compileComponents();
